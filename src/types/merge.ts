@@ -1,1 +1,1 @@
-export type Merge<P, T> = Omit<PageTransitionEvent, keyof T> & T;
+export type Merge<P, T> = Omit<P , keyof T> & T;
