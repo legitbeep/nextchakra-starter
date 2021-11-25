@@ -1,4 +1,4 @@
-import { Flex, Link, Text, useColorMode } from "@chakra-ui/react";
+import { Flex, useColorMode } from "@chakra-ui/react";
 import Image from "next/image";
 
 import HelperImage from "./HelperImage";
@@ -11,10 +11,10 @@ const ImageSection = () => {
     <>
       <MotionBox
         animate={{ y: 20, scale: 0.97 }}
-        transition={{ repeat: Infinity, duration: 2, repeatTypes: "reverse" }}
+        transition={{ repeat: Infinity, duration: 2, repeatType: "reverse" }}
         marginY={8}
-        marginX="auto"
         maxWidth={[240, 320]}
+        marginX="auto"
       >
         <Image
           src="/hello.svg"
