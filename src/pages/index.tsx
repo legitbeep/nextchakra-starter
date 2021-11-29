@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Button } from "@chakra-ui/react";
 
 import TextSection from "components/TextSection";
 import CTASection from "components/CTASection";

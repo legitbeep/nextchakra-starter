@@ -1,11 +1,22 @@
 import { Box, Button, Code, Flex, Image, Link } from "@chakra-ui/react";
 import { AiFillGithub } from "react-icons/ai";
 
+import { counterThunk, selectCounter } from "redux/slices/counter";
+import { useAppDispatch, useAppSelector } from "hooks";
+
 const repoLink = "https://github.com/legitbeep/nextchakra-starter";
 
 const CTASection = () => {
+  const dispatch = useAppDispatch();
+  const counter = useAppSelector(selectCounter);
+
+  const clickHandler = () => {
+    dispatch(counterThunk(1));
+  };
+
   return (
     <Box textAlign="center" marginTop={8}>
+      <Button onClick={clickHandler}>{counter.data} ❤ </Button>
       <Flex marginY={4} justifyContent="center" gridGap={2}>
         <Link aria-label="Deploy to Vercel" isExternal href="google.com">
           <Image src="https://vercel.com/button" alt="Vercel deploy button" />
