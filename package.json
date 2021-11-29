@@ -9,7 +9,7 @@
     "lint": "next lint",
     "lint:fix": "eslint --fix",
     "prepare": "husky install",
-    "release": "standard-version",
+    "release": "standard-version"
   },
   "dependencies": {
     "@chakra-ui/react": "^1.7.2",
