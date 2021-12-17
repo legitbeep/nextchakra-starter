@@ -4,9 +4,7 @@ const withPWA = require("next-pwa");
 /** @type {import('next').NextConfig} */
 module.exports = withPWA({
   pwa: {
-    disable: false,
-    // disable:
-    //   process.env.NODE_ENV === "development" ||
+    disable: process.env.NODE_ENV === "development" ,
     //   process.env.NODE_ENV === "preview" ||
     //   process.env.NODE_ENV === "production",
     // delete two lines above to enable PWA in production deployment
